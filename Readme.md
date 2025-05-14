@@ -2,7 +2,7 @@
 
 ## Description
 
-The Logeny Semantic Knowledge Hub is a tool that helps users manage and interact with a collection of documents and information. It provides features for:
+The Logeny Semantic Knowledge Hub is a tool that helps users manage and interact with a collections of documents on thier local machines. It provides features for:
 
 -   Synchronizing a folder with a local database.
 -   Searching documents using semantic search.
