@@ -1628,8 +1628,21 @@ server <- function(input, output, session) {
     context_window <- as.integer(dbGetQuery(con, "SELECT tagValue FROM entity_tags WHERE entity_id = ? AND tagCategory = 'context_window'",
                                             params = list(entity_id))$tagValue[1])
     
-    # Step 5: Ensure key for Gemini and OpenAI
+    # Step 5: Generate (Ensure key for Gemini and OpenAI)
     response <- ""
+
+    if (tolower(provider) == "huggingface" ) {
+      if (!exists("hf_runner")) {
+        hf_runner <<- reticulate::import_from_path("huggingface_model_runner", path = ".", convert = TRUE)
+      }
+      response <- hf_runner$generate_map_reduce_response(
+        prompt = prompt,
+        model_name = input$selected_model,
+        context_window = context_window
+      )
+    }
+
+    
     if (tolower(provider) == "google") {
       if (!exists("gem_runner")) {
         gem_runner <<- reticulate::import_from_path("gemini_model_runner", path = ".", convert = TRUE)
