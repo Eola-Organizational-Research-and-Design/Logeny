@@ -16,4 +16,4 @@ def run_gemini_chat(model_name, prompt):
         output = response.candidates[0]['content'].parts[0].text.strip()
     except Exception:
         output = response.text.strip()
-    return f"```markdown\n{output}\n```"
+    return output
