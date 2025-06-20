@@ -1,0 +1,137 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.5 cm,
+    bottom=1 cm,
+    left=1 cm,
+    right=1 cm,
+    footskip=0.5 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Shail Shah's CV},
+    pdfauthor={Shail Shah},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}  % Reduced section spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\begin{document}
+
+\begin{center}
+    \vspace{6pt}  % Added space above the name
+    {\fontsize{20 pt}{22 pt}\selectfont \textbf{Shail Shah}}  % Name remains bold and large
+    \vspace{8pt}  % Increased space below the name
+
+    {\fontsize{11 pt}{13 pt}\selectfont  % Slightly increased font size
+    San Jose, CA • \href{mailto:shails@vt.edu}{shails@vt.edu} • 540-557-8741 •  
+    \href{https://linkedin.com/in/shailshahvt}{linkedin.com/in/shailshahvt}  
+    }
+    \vspace{6pt}  % Added extra space below contact details
+\end{center}
+
+\section{Education}
+
+\textbf{Virginia Tech — Master's in Computer Science} (GPA: 3.96/4.0) \hfill (08/2023—05/2025)  
+
+\vspace{2pt}  % Small spacing before coursework
+\textbf{Relevant Coursework:}  
+Database Management Systems, Machine Learning, Software Engineering, Information Visualization,  
+Usability Engineering, User Interface and Design, Natural Language Processing, Software Design Quality  
+
+\vspace{6pt}  
+
+\textbf{Svkm’s Nmims — B.S. in Computer Engineering} (GPA: 3.7/4.0) \hfill (07/2018—05/2022)  
+
+\vspace{2pt}  % Small spacing before coursework
+\textbf{Relevant Coursework:}  
+Databases, Software Project Management, Software Engineering, Data Structures and Algorithms,  
+Object-Oriented Programming, Business Modeling and Analytics, Data Algorithm Analysis  
+
+\section{Professional Experience}
+
+\textbf{Research Assistant}, Pamplin School of Business, Virginia Tech \hfill (07/2024—Present)  
+\begin{itemize}[itemsep=2pt, topsep=3pt, parsep=2pt]
+    \item Collaborate with a cross-disciplinary team to design and implement scalable fraud detection models using autoencoders and Bayesian networks, reducing false positives by 15\% and enhancing financial risk assessment.
+    \item Develop and optimize machine learning solutions for time-series forecasting, utilizing LSTMs to improve fraud identification efficiency by 18\%.
+    \item Architect and build a real-time fraud monitoring system integrating distributed data pipelines with SQL, Spark, and Python (Dash) for large-scale financial analysis.
+    \item Work in an agile environment, coordinating a team of 8 researchers, improving productivity by 15\% through structured workflows and task automation.
+\end{itemize}
+
+\textbf{Software Engineer Intern}, Clinicspectrum (Union, NJ) \hfill (05/2024—07/2024)  
+\begin{itemize}[itemsep=2pt, topsep=3pt, parsep=2pt]
+    \item Designed and built predictive models for healthcare analytics using Amazon SageMaker, improving patient care quality by 11\% through efficient resource allocation.
+    \item Engineered scalable ETL pipelines for data cleaning, normalization, and feature extraction using TensorFlow and distributed computing frameworks.
+    \item Developed and deployed interactive dashboards in Tableau to drive data-informed decision-making, integrating real-time insights from large datasets.
+\end{itemize}
+
+\textbf{Software Engineer}, Heat Technologies Ltd. (Gujarat, India) \hfill (07/2022—05/2023)  
+\begin{itemize}[itemsep=2pt, topsep=3pt, parsep=2pt]
+    \item Designed and optimized large-scale relational database systems, analyzing datasets with over 100,000 records to drive data-driven business decisions.
+    \item Created system documentation and user guides, aiding 100+ users in adapting to new workflows and technology.
+\end{itemize}
+
+\section{Skills}
+
+\textbf{Programming Languages:} Python, C, Java, R, JavaScript • \textbf{Database Management:} SQL, NoSQL • \textbf{Data Analysis and Visualization Libraries/tools:} Excel, Tableau, Pandas, Matplotlib, NumPy, Scikit-learn • \textbf{Version Control:} Git • \textbf{Cloud Platform:} AWS, Azure, GCP • \textbf{Methodologies:} Agile, Lean, Six Sigma • \textbf{Project Management Tool:} Jira • \textbf{Schema Definition Languages:} DDL, SDL • \textbf{Operating System:} Unix, Windows • \textbf{Data Warehousing:} Snowflake, Redshift • \textbf{Big Data Technologies:} Hadoop, Databricks, Apache Spark • \textbf{Machine Learning:} Clustering, Supervised/Unsupervised, Time-Series Forecasting, Recommendation Engines • \textbf{ETL Tool:} Airflow
+
+\section{Personal Projects}
+
+\textbf{Machine Learning Blogs} \hfill \href{https://shail-shah.github.io/posts/Probability/ProbabilityDist.html}{github.com/Shailshahvt/mlblogs}  
+\begin{itemize}[itemsep=3pt, topsep=5pt, parsep=3pt]
+    \item Developed a website for publishing machine learning blogs with implementations of various ML algorithms. Used NumPy and Matplotlib for effective visualizations.
+\end{itemize}
+
+\textbf{Simulation for Multi-Agent Search} \hfill \href{https://github.com/Shailshahvt/multisim}{github.com/Shailshahvt/multi-agent-search}  
+\begin{itemize}[itemsep=3pt, topsep=5pt, parsep=3pt]
+    \item Implemented a Bayesian simulation framework for multi-agent search over a rugged landscape.
+    \item Designed agents representing firms that learn from past experiences and optimize strategies using ML, RL, and Bayesian optimization. Also Integrated large language models (LLMs) to enhance decision-making and improve predictions of firm performance.
+\end{itemize}
+
+
+\section{Certifications}
+
+\textbf{SAS Visual Analytics and Base} • \textbf{Databases by Meta} • \textbf{DevOps Essentials by IBM} • \textbf{Python Programming (Udemy)} • \textbf{Backend Developer Professional Certificate by Meta} • \textbf{Meta Business Analyst Professional Certificate} • \textbf{AWS Data Engineer Associate Certificate}
+
+\end{document}
